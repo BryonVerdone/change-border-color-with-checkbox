@@ -5,8 +5,10 @@ const blueBtn = document.getElementById('blue');
 
 // images
 
-const images = document.querySelectorAll('.img');
+// need to set up add border to all images
 
-redBtn.addEventListener('click', function (e) {
-  e.classList.add('border-red');
+const images = document.querySelector('.img');
+
+redBtn.addEventListener('click', function () {
+  images.classList.add('border-red');
 });
