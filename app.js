@@ -1,29 +1,29 @@
-// Btns
+//select images
+
+const images = document.querySelectorAll('.img-container img');
+
+console.log(images);
+
+// select btns
+
 const redBtn = document.getElementById('red');
 const greenBtn = document.getElementById('green');
 const blueBtn = document.getElementById('blue');
 
-// images
-
-const imgOne = document.getElementById('grey');
-const imgTwo = document.getElementById('code');
-const imgThree = document.getElementById('desk');
-// need to set up add border to all images
+// functionality
 
 redBtn.addEventListener('click', function () {
-  imgOne.classList.add('border-red');
-  imgTwo.classList.add('border-red');
-  imgThree.classList.add('border-red');
-  if (imgOne.classList.contains('border-green')) {
-    imgOne.classList.remove('border-green');
+  for (let i = 0; i < images.length; i++) {
+    images[i].style.border = ' 3px solid red';
   }
 });
-
 greenBtn.addEventListener('click', function () {
-  imgOne.classList.remove('border-red');
-  imgTwo.classList.remove('border-red');
-  imgThree.classList.remove('border-red');
-  imgOne.classList.add('border-green');
-  imgTwo.classList.add('border-green');
-  imgThree.classList.add('border-green');
+  for (let i = 0; i < images.length; i++) {
+    images[i].style.border = ' 3px solid green';
+  }
+});
+blueBtn.addEventListener('click', function () {
+  for (let i = 0; i < images.length; i++) {
+    images[i].style.border = ' 3px solid blue';
+  }
 });
